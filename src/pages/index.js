@@ -10,13 +10,13 @@ import Subscribe from '../components/Subscribe';
 import Header from '../components/Header';
 import ProjectLinks from '../components/ProjectLinks';
 
-import ipad from '../assets/images/ipad.png';
+import projects from '../assets/images/shf-projects.png';
 import townHallBrawl from '../assets/images/town-hall-brawl.jpg';
 import foodFight from '../assets/images/food-fight.png';
 import conflictManager from '../assets/images/conflict-manager.png';
 import compass from '../assets/images/compass.png';
 import flexable from '../assets/images/flexable.png';
-import bgMaster from '../assets/images/bg-masthead.jpg';
+import team from '../assets/images/shf-team.jpg'
 
 const IndexPage = () => (
   <Layout>
@@ -42,7 +42,7 @@ const IndexPage = () => (
       <div className="container">
         <div className="row">
           <div className="col-lg-8 mx-auto">
-            <h2 className="text-white mb-4">The Unconventional Developer</h2>
+            <h2 className="text-white mb-1">The Unconventional Developer</h2>
             <p className="text-white-50">
               After spending 4 years in the power systems industry, I decided to
               ditch the pension and chase after real meaning as a web developer.
@@ -52,7 +52,7 @@ const IndexPage = () => (
             </p>
           </div>
         </div>
-        <img src={ipad} className="img-fluid" alt="" />
+        <img src={projects} className="img-fluid" alt="" />
       </div>
     </section>
 
@@ -60,17 +60,18 @@ const IndexPage = () => (
       <div className="container">
         <div className="row align-items-center no-gutters mb-4 mb-lg-5">
           <div className="col-xl-8 col-lg-7">
-            <img className="img-fluid mb-3 mb-lg-0" src={bgMaster} alt="" />
+            <img className="img-fluid mb-3 mb-lg-0" src={team} alt="" />
           </div>
           <div className="col-xl-4 col-lg-5">
             <div className="featured-text text-center text-lg-left">
-              <h4 className ="project-name">My Projects</h4>
+              <h4 className="project-name">My Projects</h4>
               <p className="text-black-50 mb-0">
-                The projects below are ordered from my very first CLI
+                I've had wonderful experiences working on both teams and on personal
+                projects. They below are ordered from my very first CLI
                 application to my most recent project to date. I believe that
                 showcasing all my projects as a real demonstration of the
-                development of my skills is key for helping others overcome the
-                obstacles to pursue their dreams.
+                development of my skills is key to help others pursue their own
+                personal development in the tech scene and beyond!
               </p>
             </div>
           </div>
@@ -201,8 +202,6 @@ const IndexPage = () => (
         </div>
       </div>
     </section>
-
-    <Subscribe />
 
     <SocialLinks />
     <Footer />
