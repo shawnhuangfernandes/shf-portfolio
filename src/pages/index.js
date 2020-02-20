@@ -10,6 +10,7 @@ import Subscribe from '../components/Subscribe';
 import Header from '../components/Header';
 import ProjectLinks from '../components/ProjectLinks';
 
+// added a comment
 import projects from '../assets/images/shf-projects.png';
 import townHallBrawl from '../assets/images/town-hall-brawl.jpg';
 import foodFight from '../assets/images/food-fight.png';
