@@ -16,7 +16,10 @@ import foodFight from '../assets/images/food-fight.png';
 import conflictManager from '../assets/images/conflict-manager.png';
 import compass from '../assets/images/compass.png';
 import flexable from '../assets/images/flexable.png';
-import team from '../assets/images/shf-team.jpg'
+import personae from '../assets/images/personae.png';
+import playItForward from '../assets/images/play-it-forward.png';
+import team from '../assets/images/shf-team.jpg';
+import { setMatchPaths } from '../../.cache/find-path';
 
 const IndexPage = () => (
   <Layout>
@@ -52,7 +55,7 @@ const IndexPage = () => (
             </p>
           </div>
         </div>
-        <img src={projects} className="img-fluid" alt="" />
+        <img src={projects} className="img-fluid mb-6" alt="" />
       </div>
     </section>
 
@@ -66,12 +69,11 @@ const IndexPage = () => (
             <div className="featured-text text-center text-lg-left">
               <h4 className="project-name">My Projects</h4>
               <p className="text-black-50 mb-0">
-                I've had wonderful experiences working on both teams and on personal
-                projects. They below are ordered from my very first CLI
-                application to my most recent project to date. I believe that
-                showcasing all my projects as a real demonstration of the
-                development of my skills is key to help others pursue their own
-                personal development in the tech scene and beyond!
+                I've had wonderful experiences working on both teams and on
+                personal projects. I believe that showcasing all my projects as
+                a real demonstration of the development of my skills is key to
+                help others pursue their own personal development in the tech
+                scene and beyond!
               </p>
             </div>
           </div>
@@ -79,23 +81,22 @@ const IndexPage = () => (
 
         <div className="row justify-content-center no-gutters">
           <div className="col-lg-6">
-            <img className="img-fluid" src={townHallBrawl} alt="" />
+            <img className="img-fluid" src={playItForward} alt="" />
           </div>
           <div className="col-lg-6 order-lg-first">
             <div className="bg-black text-center h-100 project">
               <div className="d-flex h-100">
                 <div className="project-text w-100 my-auto text-center text-lg-right">
-                  <h4 className="text-white">Town Hall Brawl</h4>
+                  <h4 className="text-white">Play It Forward</h4>
                   <p className="mb-0 text-white-50">
-                    This was my first programming project ever built. It is a
-                    simple probability game where you place bets on citizens in
-                    a room to and score points based on your citizen(s) are
-                    still standing after the brawl. It was built using Ruby and
-                    SQL. Click the links below to learn more about Town Hall
-                    Brawl!
+                    Play It Forward is a platform to incentivize volunteers to
+                    help nonprofits, and keep them motivated to keep supporting
+                    their communities by gamifying volunteering engagement. It
+                    is built with ReactJS, GraphQL, Hasura, and Tailwind CSS.
+                    Click the links for more details!
                   </p>
-                  <br></br>{' '}
-                  <ProjectLinks projectLinks={config.townHallBrawlLinks} />
+                  <br></br>
+                  <ProjectLinks projectLinks={config.pifLinks} />
                 </div>
               </div>
             </div>
@@ -104,23 +105,22 @@ const IndexPage = () => (
 
         <div className="row justify-content-center no-gutters mb-5 mb-lg-0">
           <div className="col-lg-6">
-            <img className="img-fluid" src={foodFight} alt="" />
+            <img className="img-fluid" src={personae} alt="" />
           </div>
           <div className="col-lg-6">
             <div className="bg-black text-center h-100 project">
               <div className="d-flex h-100">
                 <div className="project-text w-100 my-auto text-center text-lg-left">
-                  <h4 className="text-white">Food Fight</h4>
+                  <h4 className="text-white">Personae</h4>
                   <p className="mb-0 text-white-50">
-                    Food Fight is a simple game where you select a chef, and try
-                    to keep your customers fed by guessing the correct
-                    ingredients for recipes. Food Fight was built using Ruby on
-                    Rails for the frontend and backend, SQLite3 for the
-                    database, and ActiveRecord. Click the links below to learn
-                    more about Food Fight!
+                    Personae is a Text Annotation and Machine Learning SaaS tool
+                    for local government and beyond. I am one of two lead
+                    developers as we move this application from an idea to a
+                    real usable application. Personae is built using React and
+                    Rails. Click the links below for more information!
                   </p>
-                  <br></br>{' '}
-                  <ProjectLinks projectLinks={config.foodFightLinks} />
+                  <br></br>
+                  <ProjectLinks projectLinks={config.personaeLinks} />
                 </div>
               </div>
             </div>
@@ -129,23 +129,22 @@ const IndexPage = () => (
 
         <div className="row justify-content-center no-gutters">
           <div className="col-lg-6">
-            <img className="img-fluid" src={conflictManager} alt="" />
+            <img className="img-fluid" src={flexable} alt="" />
           </div>
           <div className="col-lg-6 order-lg-first">
             <div className="bg-black text-center h-100 project">
               <div className="d-flex h-100">
                 <div className="project-text w-100 my-auto text-center text-lg-right">
-                  <h4 className="text-white">Conflict Manager</h4>
+                  <h4 className="text-white">Flexable</h4>
                   <p className="mb-0 text-white-50">
-                    Conflict Manager is a humorous game where you battle other
-                    developers and unlock new characters. Conflict manager was
-                    built using Ruby on Rails for the backend, Javascript for
-                    the frontend, PostgreSQL for the database, and ActiveRecord.
-                    Click on the links below to learn more about Conflict
-                    Manager.
+                    Flexable is a workout tool to help regular people stay fit.
+                    Flexable used ReactJS for the front end, Ruby on Rails for
+                    the backend, Redux for state management, PostgreSQL for the
+                    database, Material UI for styling, and ActiveRecord. Click
+                    the links below to learn more about Flexable.
                   </p>
-                  <br></br>{' '}
-                  <ProjectLinks projectLinks={config.conflictManagerLinks} />
+                  <br></br>
+                  <ProjectLinks projectLinks={config.flexableLinks} />
                 </div>
               </div>
             </div>
@@ -179,22 +178,73 @@ const IndexPage = () => (
 
         <div className="row justify-content-center no-gutters">
           <div className="col-lg-6">
-            <img className="img-fluid" src={flexable} alt="" />
+            <img className="img-fluid" src={conflictManager} alt="" />
           </div>
           <div className="col-lg-6 order-lg-first">
             <div className="bg-black text-center h-100 project">
               <div className="d-flex h-100">
                 <div className="project-text w-100 my-auto text-center text-lg-right">
-                  <h4 className="text-white">Flexable</h4>
+                  <h4 className="text-white">Conflict Manager</h4>
                   <p className="mb-0 text-white-50">
-                    Flexable is a workout tool to help regular people stay fit.
-                    Flexable used ReactJS for the front end, Ruby on Rails for
-                    the backend, Redux for state management, PostgreSQL for the
-                    database, Material UI for styling, and ActiveRecord. Click
-                    the links below to learn more about Flexable.
+                    Conflict Manager is a humorous game where you battle other
+                    developers and unlock new characters. Conflict manager was
+                    built using Ruby on Rails for the backend, Javascript for
+                    the frontend, PostgreSQL for the database, and ActiveRecord.
+                    Click on the links below to learn more about Conflict
+                    Manager.
                   </p>
-                  <br></br>
-                  <ProjectLinks projectLinks={config.flexableLinks} />
+                  <br></br>{' '}
+                  <ProjectLinks projectLinks={config.conflictManagerLinks} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="row justify-content-center no-gutters mb-5 mb-lg-0">
+          <div className="col-lg-6">
+            <img className="img-fluid" src={foodFight} alt="" />
+          </div>
+          <div className="col-lg-6">
+            <div className="bg-black text-center h-100 project">
+              <div className="d-flex h-100">
+                <div className="project-text w-100 my-auto text-center text-lg-left">
+                  <h4 className="text-white">Food Fight</h4>
+                  <p className="mb-0 text-white-50">
+                    Food Fight is a simple game where you select a chef, and try
+                    to keep your customers fed by guessing the correct
+                    ingredients for recipes. Food Fight was built using Ruby on
+                    Rails for the frontend and backend, SQLite3 for the
+                    database, and ActiveRecord. Click the links below to learn
+                    more about Food Fight!
+                  </p>
+                  <br></br>{' '}
+                  <ProjectLinks projectLinks={config.foodFightLinks} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="row justify-content-center no-gutters">
+          <div className="col-lg-6">
+            <img className="img-fluid" src={townHallBrawl} alt="" />
+          </div>
+          <div className="col-lg-6 order-lg-first">
+            <div className="bg-black text-center h-100 project">
+              <div className="d-flex h-100">
+                <div className="project-text w-100 my-auto text-center text-lg-right">
+                  <h4 className="text-white">Town Hall Brawl</h4>
+                  <p className="mb-0 text-white-50">
+                    This was my first programming project ever built. It is a
+                    simple probability game where you place bets on citizens in
+                    a room to and score points based on your citizen(s) are
+                    still standing after the brawl. It was built using Ruby and
+                    SQL. Click the links below to learn more about Town Hall
+                    Brawl!
+                  </p>
+                  <br></br>{' '}
+                  <ProjectLinks projectLinks={config.townHallBrawlLinks} />
                 </div>
               </div>
             </div>

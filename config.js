@@ -114,6 +114,31 @@ module.exports = {
       url: 'https://dev.to/shawnhuangfernandes/booting-up-bootcamp-week-15-final-project-graduation-356k',
     }
   ],
+  pifLinks: [
+    {
+      icon: 'fa-github fa-3x',
+      name: 'Github',
+      url: 'https://github.com/Taljjaa/PlayItForward-Client',
+    },
+    {
+      icon: 'fa-dev fa-3x',
+      name: 'Blog',
+      url: 'https://dev.to/shawnhuangfernandes/life-as-a-bootcamp-dev-part-5-interviews-offers-and-the-power-of-networking-21pg',
+    }
+  ],
+  personaeLinks: [
+    {
+      icon: 'fa-github fa-3x',
+      name: 'Github',
+      url: 'https://github.com/shawnhuangfernandes/Personae-Client/',
+    },
+    {
+      icon: 'fa-dev fa-3x',
+      name: 'Blog',
+      url: 'https://dev.to/shawnhuangfernandes/life-as-a-bootcamp-dev-week-6-quarantines-routines-and-the-job-scene-25in',
+    }
+  ],
+
   email: 'shawnhuangfernandes@gmail.com',
   phone: '206-478-4889',
   address: '840 NE 125th St, Seattle, WA',
