@@ -48,7 +48,7 @@ const IndexPage = () => (
             <h2 className="text-white mb-1">The Unconventional Developer</h2>
             <p className="text-white-50">
               After spending 4 years in the power systems industry, I decided to
-              ditch the pension and chase after real meaning as a web developer.
+              ditch the pension and chase after real meaning as a developer.
               I believe that we each have a responsbility to bring out the best
               from one another, and I hope to bring that belief to life through
               my projects, my work, and my relationships.
